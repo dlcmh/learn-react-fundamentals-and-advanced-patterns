@@ -1,0 +1,32 @@
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script type="text/javascript">
+  const rootElement = document.getElementById('root')
+
+  // const element = document.createElement('div')
+  // element.className = 'container'
+  // element.textContent = 'Hello World'
+
+  // rootElement.appendChild(element)
+
+  // Style 1
+  // const element = React.createElement(
+  //   'div',
+  //   { className: 'container' },
+  //   'Hello World',
+  //   'Goodbye World'
+  // )
+
+  // Style 2 - wuth children as a property
+  const element = React.createElement('div', {
+    className: 'container',
+    children: ['Hello World', 'Goodbye World']
+    // children: 'Hello World'
+  })
+
+  ReactDOM.render(element, rootElement)
+  console.log(element, rootElement)
+</script>
